@@ -7,30 +7,36 @@
     <title>TO_DO</title>
 </head>
 <link rel="stylesheet" href="TO_DO_LISTE_STYLE.css">
+
 <body>
 
-<div class="listContainer">
+<section class="container">
 
-    <h1>note register</h1>
+    <div class="listContainer">
 
-    <div class="btnContainer">
-        <button id="btnADD" name="add-list-item"></button>
-        <br>
-        <button id="btnREMOVE" name="remove-list-item"></button>
-        <br>
-        <button id="clearALL" name="clear-it-all" ></button>
+        <h1>note register</h1>
+    
+        <div class="btnContainer">
+            <button id="btnADD" name="add-list-item"></button>
+            <br>
+            <button id="btnREMOVE" name="remove-list-item"></button>
+            <br>
+            <button id="clearALL" name="clear-it-all" ></button>
+        </div>
+     
+        <div id="inptTASKDiv">
+            <label for="input" id="newTaskText">note</label>
+            <input id="newTASK" type="text" name="to-do-task">
+        </div>
+    
+        <div class="listDiv">
+            <ul id="list001"> </ul>
+        </div>
+    
     </div>
- 
-    <div id="inptTASKDiv">
-        <label for="input" id="newTaskText">note</label>
-        <input id="newTASK" type="text" name="to-do-task">
-    </div>
 
-    <div class="listDiv">
-        <ul id="list001"> </ul>
-    </div>
+</section>
 
-</div>
 
 <script src="TO_DO_main.js"></script>
 
