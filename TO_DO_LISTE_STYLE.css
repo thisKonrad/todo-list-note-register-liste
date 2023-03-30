@@ -1,152 +1,165 @@
-/* TO DO main css sylesheet */
+/* :: TO DO -- css stylesheet :: */
 
 :root{ /* colors: */
     --colorFrame: rgba(0, 0, 0, 0.75);
-    --color01: rgba(218, 218, 218, 0.2);
-    --color02: rgba(163, 163, 163, 0.75);
-    --color03: rgb(194, 194, 194);
-    --color04: rgb(243, 241, 241);
+    --color01: rgba(235, 235, 235, 0.6);
+    --color02: rgba(230, 230, 230, 0.7);
+    --color03: rgba(190, 190, 190, 0.4);
+    --color04: rgb(255, 255, 255);
     --colorBtn: rgba(207, 1, 1, 0.733);
 }
 *{  box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:0;
-    padding:0;}
+    padding:0;
+}
 
 body{ color:black;
     background-color: white;
     padding-top: 12rem;
-    display:flex;
-    justify-content: center;
 }
 
-h1{ margin: 2rem;
+.container{  display:flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%; 
+    max-height: 100%;}
+
+h1{ margin: 4%;
     font-stretch: 2rem;}
 
-/* :: the list :: */ 
+/* ::¶:: the list ::¶:: */ 
 
-.listContainer{ position: absolute;
-    background-color: var(--color01);
-    border: 0.25rem solid var(--color03);
-    border-radius: 0.8rem;
+.listContainer{ position: relative;
     display: flex;
     justify-content: center;
     justify-items: center;
     flex-direction: column;
     align-items: center;
+    max-width: 50%; 
+    max-height: 70%;
+    border: 0.25rem solid var(--color03);
+    border-radius: 0.8rem;
+    background-color: var(--color01);
 }
 
 .listDiv{ position: relative;
-    margin: 1rem;
-    background-color: var(--color04);
+    min-width: 80%;
+    min-height: 30%;
+    margin: 0.5%;
     border: 0.08rem solid var(--color03);
     border-radius: 0.8rem;
-    display:flex;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    align-items: center;
-    min-width: 20rem;
-    min-height: 4rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--color04);
 }
    
 #list001{ position: relative; 
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 200%;
     list-style-type: none;
-    height:100%; 
-    width:100%;
-    padding: 0.4rem;
+    padding: 2%;
 }
-    
 #list001 :nth-child(odd){ 
     background-color: var(--color03);
-    border-radius: 0.4rem;
-    padding: 0.5rem;
+    border-radius: 1.5%;
+    padding: 3%;
 }
 #list001 :nth-child(even){ 
     background-color: var(--color04);
-    padding: 0.5rem;
+    padding: 4%;
 }
 
-/* buttons: */ 
+/* :::: - buttons - :::: */ 
 .btnContainer{ position: relative;
     display: flex;
     justify-content: space-evenly;
 }
 
-#btnADD:hover{ transform: scale(1.2);}
-#btnREMOVE:hover{ transform: scale(1.2);}
-#clearALL:hover{ transform: scale(1.2);}
-
-#btnADD{ background-color: var(--color02);
+#btnADD{ position: relative;
     cursor: pointer;
-    padding: 0.3rem;
-    font-size: 1.2rem;
-    width: 3rem;
+    width: 55%;
+    height: 55%;
+    margin: 5%;
+    padding: 1%;
+    font-size: 150%;
     border: 0.2rem solid var(--color03);
     border-radius: 0.5rem;
-    margin: 1rem;
+    background-color: var(--color02);
     box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
 }
 #btnADD:after{ content: '\2795';}
  
-#btnREMOVE{ background-color: var(--color02);
+#btnREMOVE{ position: relative;
     cursor: pointer;
-    padding: 0.3rem;
-    font-size: 1.2rem;
-    width: 3rem;
+    width: 55%;
+    height: 55%;
+    margin: 5%;
+    padding: 1%;
+    font-size: 150%;
     border: 0.2rem solid var(--color03);
     border-radius: 0.5rem;
-    margin: 1rem;
+    background-color: var(--color02);
     box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
 }
 #btnREMOVE:after{ content: '\2796';}
 
-#clearALL{ background-color: var(--color02);
-    position: relative;
-    display: visible;
-    margin: 1rem;
+#clearALL{ position: relative;
     cursor: pointer;
-    padding: 0.3rem;
-    font-size: 1.5rem;
+    width: 55%;
+    height: 55%;
+    margin: 5%;
+    padding: 1%;
+    font-size: 150%;
     font-weight: bold;
     color: var(--colorBtn);
-    width: 3rem;
+    background-color: var(--color02);
     border: 0.2rem solid var(--color03);
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
 }
 #clearALL:after{ content:'\2298';}
 
+#btnADD:hover{ transform: scale(1.2);}
+#btnREMOVE:hover{ transform: scale(1.2);}
+#clearALL:hover{ transform: scale(1.2);}
+
+
 /* input: */
 #inptTASKDiv{ position: relative;
-        display:flex;
-        justify-content: center;
-        justify-items: center;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        margin: 2rem;
-        box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
-        width: 25rem;
-        font-size: 2rem;
-        border: 0.2rem solid var(--color03);
-        border-radius: 0.6rem;
+    padding: 3%;
+    margin: 4%;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
+    width: 95%;
+    font-size: 150%;
+    border: 0.2rem solid var(--color03);
+    border-radius: 0.6rem;
 }
-#newTaskText{ margin: 0.3rem;
-}
-#newTASK{ min-width:20rem; 
-    min-height:4rem;
-    margin-top: 1.2rem;
-    border-style:inherit;
+s
+#newTaskText{ margin: 1%;}
+
+#newTASK{ width: 85%; 
+    height: 25%;
+    margin-top: 1.5%;
+    padding: 2%;
+    border-style: inherit;
     background-color: var(--color04);
     border-radius: 0.6rem;
-    font-size:1.4rem;
+    font-size: 160%;
 }
  
 /* class for checked state onclick */
 .checked{ text-decoration: line-through;}
+
+
+@media only screen and (max-width: 940px) {
+    .listContainer{ max-width: 100%;
+    max-height: 100%;
+    padding: 2%;}
+}
+
+@media (orientation:landscape){
+    .listContainer{ max-width: 100%;
+    max-height: 100%;
+    padding: 2%;}
+}
