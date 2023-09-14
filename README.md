@@ -1,5 +1,5 @@
 # todo-list-note-register-liste
-note-to- do register list Liste
+note-to- do register list, checklist 
 
 you can add entries with the buttons or enterKey and mark(stroke) the entries with an click.
 you can delete the entries with an dblclick.
