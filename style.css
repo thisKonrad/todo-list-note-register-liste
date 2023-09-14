@@ -1,0 +1,172 @@
+/* TO DO checklist sylesheet */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+:root{ 
+    /* colors: */
+    --colorBack: whitesmoke;
+    --colorFrame: rgba(0, 0, 0, 0.6);
+    --color01: rgb(182, 182, 182);
+    --color02: rgba(255, 255, 255, 0.8);
+    --color03: rgb(236, 236, 236);
+    --color04: rgb(98, 97, 119);
+    --color05: rgb(255, 255, 255);
+    --color06: rgb(156, 156, 156);
+    --color07: rgb(51, 53, 58);
+    --colorBtn: rgba(207, 1, 1, 0.733);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{ 
+    background-color: var(--colorBack);
+    padding-top: 12rem;
+    display:flex;
+    justify-content: center;
+}
+
+h1{ 
+    margin: 2rem;
+    font-stretch: 2rem;
+}
+
+/* list : */ 
+
+.listContainer{ 
+    /* position: absolute; */
+    background-color: var(--color01);
+    border: 0.25rem solid var(--color03);
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    color:aliceblue;
+    text-shadow: 
+    -1px -1px 4px rgba(0, 0, 0, 0.4), 
+    1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem var(--colorFrame);
+}
+
+.listDiv{ 
+    position: relative;
+    margin: 1rem;
+    background-color: var(--color05);
+    border: 0.06rem solid var(--colorBack);
+    border-radius: 0.8rem;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: 20rem;
+    min-height: 4rem;
+}
+   
+#list001{
+    position: relative; 
+    cursor: pointer;
+    font-size: 2rem;
+    list-style-type: none;
+    height:100%; 
+    width:100%;
+    padding: 0.4rem;
+}
+    
+#list001 :nth-child(odd){ 
+    background-color: var(--color07);
+    padding: 0.5rem;
+}
+#list001 :nth-child(even){ 
+    background-color: var(--color04);
+    padding: 0.5rem;
+}
+
+/* buttons: */ 
+.btnContainer{ 
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btnADD:hover{ transform: scale(1.2);}
+#btnREMOVE:hover{ transform: scale(1.2);}
+#clearALL:hover{ transform: scale(1.2);}
+
+#btnADD{ 
+    background-color: var(--color02);
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    width: 3rem;
+    border: 0.2rem solid var(--colorFrame);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
+}
+#btnADD:after{ content: '\2795';}
+ 
+#btnREMOVE{ 
+    background-color: var(--color02);
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    width: 3rem;
+    border: 0.2rem solid var(--colorFrame);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
+}
+#btnREMOVE:after{ content: '\2796';}
+
+#clearALL{ 
+    background-color: var(--color02);
+    position: relative;
+    display: visible;
+    margin: 1rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colorBtn);
+    width: 3rem;
+    border: 0.2rem solid var(--colorFrame);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
+}
+#clearALL:after{ content:'\2298';}
+
+/* input: */
+#inptTASKDiv{ 
+    position: relative;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--colorFrame);
+    width: 25rem;
+    font-size: 2rem;
+    border: 0.2rem solid var(--color06);
+    border-radius: 0.6rem;
+}
+#newTaskText{ margin: 0.3rem;
+}
+#newTASK{ 
+    min-width:20rem; 
+    min-height:4rem;
+    margin-top: 1.2rem;
+    border-style:inherit;
+    background-color: var(--color05);
+    border-radius: 0.6rem;
+    font-size:1.4rem;
+}
+ 
+/* class for checked state onclick */
+.checked{ text-decoration: line-through;}
+
+
+@media only screen and (orientation: landscape){
+main{flex-wrap: wrap;}
+}
